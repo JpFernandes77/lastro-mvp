@@ -1,0 +1,32 @@
+name: Solana Devnet Integration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  devnet-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SOLANA_PRIVATE_KEY: ${{ secrets.SOLANA_PRIVATE_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate real M2 handoff
+        run: npm run demo
+
+      - name: Attest and verify on Solana Devnet
+        run: npm run test:solana:devnet

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+out/
+coverage/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.DS_Store
+Thumbs.db
+
+# Future private vault / restricted project material.
+# IMPORTANT: this does not make already tracked files private.
+docs/business/
+docs/pitch/
+docs/private/
+docs/hackathon/
+docs/diario-de-bordo/*dataroom*

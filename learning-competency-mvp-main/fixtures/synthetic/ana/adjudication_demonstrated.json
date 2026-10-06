@@ -1,0 +1,11 @@
+{
+  "_note": "Adjudicação SIMULADA apenas para demonstrar o caminho excepcional após um CONFLICT do Consensus Core.",
+  "confirm_demonstrated": true,
+  "summary_note": "O adjudicador resolveu o conflito usando as evidências já preservadas.",
+  "decisions": [
+    { "criterion_id": "C1", "action": "accept" },
+    { "criterion_id": "C2", "action": "accept" },
+    { "criterion_id": "C3", "action": "accept", "note": "Evidência apresentada resolve o conflito interpretativo." },
+    { "criterion_id": "C4", "action": "accept" }
+  ]
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LASTRO — Identidade v0.2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#fff;--fg:#0b0b0c;--mut:#666;--line:#ddd;--ac:#1683FF;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0c;--fg:#f4f4f4;--mut:#9a9a9a;--line:#26262a}}
+:root[data-theme="dark"]{--bg:#0b0b0c;--fg:#f4f4f4;--mut:#9a9a9a;--line:#26262a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 "Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:40px 20px 80px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+.k{font:500 11px "JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+h1{font-size:clamp(40px,9vw,88px);letter-spacing:.22em;margin:14px 0 8px;font-weight:600;line-height:1}
+h2{font-size:26px;margin:8px 0 14px;font-weight:600;letter-spacing:-.01em}
+p{max-width:64ch;color:var(--mut);margin:0 0 12px}
+p b,li b{color:var(--fg);font-weight:600}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:18px}
+.t{border:1px solid var(--line);border-radius:12px;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px;--ac:#1683FF}
+.t small{font:400 11px "JetBrains Mono",monospace;opacity:.7}
+.d{background:#000;color:#fff}.l{background:#fff;color:#000}.m{background:#000;color:#fff;--ac:currentColor}
+.hero{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.hero .t{width:260px;min-height:260px}
+.sw{height:84px;border-radius:10px;border:1px solid var(--line);padding:10px;font:400 11px "JetBrains Mono",monospace;display:flex;align-items:flex-end}
+.row{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
+.st{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:18px}
+.c{border-radius:10px;padding:14px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.06em;min-height:92px;display:flex;flex-direction:column;justify-content:space-between}
+.c i{font-style:normal;font-weight:400;opacity:.75;text-transform:none;letter-spacing:0;font-family:"Inter Tight",sans-serif;font-size:12px}
+.c1{background:#2a2a2e;color:#d9d9d9}
+.c2{border:1.5px dashed #9a9a9a;color:#d9d9d9}
+.c3{border:1.5px solid #fff;color:#fff}
+.c4{background:#fff;color:#000}
+.c5{background:#1683FF;color:#fff}
+.c6{background:#000;color:#1683FF;border:1.5px solid #1683FF}
+.ban{background:#000;color:#fff;border-radius:12px;padding:34px;display:flex;align-items:center;gap:22px;--ac:#1683FF;flex-wrap:wrap}
+.ban h3{margin:0;letter-spacing:.24em;font-weight:600;font-size:22px}
+.ban p{color:#9a9a9a;margin:4px 0 0}
+.av{width:96px;height:96px;border-radius:50%;background:#000;color:#fff;--ac:#1683FF;display:grid;place-items:center;border:1px solid var(--line)}
+ul{color:var(--mut);padding-left:18px;margin:0}li{margin:4px 0}
+.two{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="lm" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="4"/><g transform="translate(0 5)"><polygon points="60,26 82,38 60,50 38,38" fill="var(--ac,currentColor)"/><g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="miter"><polyline points="34,52 60,66 86,52"/><polyline points="34,68 60,82 86,68"/></g></g></symbol>
+<symbol id="ls" viewBox="0 0 120 120"><polygon points="60,12 94,31 60,50 26,31" fill="var(--ac,currentColor)"/><g fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter"><polyline points="24,56 60,77 96,56"/><polyline points="24,82 60,103 96,82"/></g></symbol>
+</defs></svg>
+<main>
+<header style="padding:30px 0 40px">
+<div class="k">Identidade visual · v0.2 · alinhada ao sistema LASTRO</div>
+<h1>LASTRO</h1>
+<p style="font-size:20px;color:var(--fg)">Competências que deixam lastro.</p>
+<p>Infraestrutura para transformar evidências de trabalho e aprendizagem em estados de competência verificáveis.</p>
+</header>
+
+<section>
+<div class="k">01 · Símbolo</div>
+<h2>Camadas que sustentam uma prova</h2>
+<div class="hero">
+<div class="t d"><svg width="190" height="190"><use href="#lm"/></svg></div>
+<div>
+<p><b>Anel:</b> integridade e verificação.</p>
+<p><b>Duas camadas em V:</b> evidência e estado, a base que sustenta a prova.</p>
+<p><b>Losango azul:</b> a prova registrada ou verificável. É o único ponto de cor, no topo da pilha.</p>
+<p>Simétrico, sem texto, sem moeda, cérebro ou diploma. Não depende de IA, blockchain ou Solana.</p>
+</div></div>
+<div class="g">
+<div class="t d"><svg width="96" height="96"><use href="#lm"/></svg><small>Principal · fundo escuro</small></div>
+<div class="t l"><svg width="96" height="96"><use href="#lm"/></svg><small>Azul · fundo claro</small></div>
+<div class="t m"><svg width="96" height="96"><use href="#lm"/></svg><small>Monocromática</small></div>
+<div class="t d"><div class="row"><svg width="48" height="48"><use href="#ls"/></svg><svg width="32" height="32"><use href="#ls"/></svg><svg width="16" height="16"><use href="#ls"/></svg></div><small>Reduzida · 48/32/16 px</small></div>
+</div>
+</section>
+
+<section>
+<div class="k">02 · Nome</div>
+<h2>LASTRO</h2>
+<div class="two">
+<div>
+<p>Em português, <b>ter lastro</b> é ter base e sustentação: algo vale porque há evidência por trás. É também a camada inferior que dá estabilidade. O símbolo e o nome dizem a mesma coisa.</p>
+<p>Seis letras, pronúncia simples, curto para handle e domínio. Não promete "certificado", "blockchain" ou verificação que o MVP não sustenta.</p>
+</div>
+<div>
+<p><b>Alternativas da mesma lista do repositório:</b> NEXO (vínculo entre evidência e competência), ATTESTA (mais literal, mais técnico), VERA (curto, mas genérico em buscas).</p>
+<p><b>Pendente:</b> domínio, marca (INPI), GitHub/X, significado em inglês e conflito com empresas existentes. Não tratar como nome aprovado.</p>
+</div></div>
+<div class="row" style="margin-top:20px"><div class="ban" style="flex:1"><svg width="64" height="64"><use href="#lm"/></svg><div><h3>LASTRO</h3><p>Competências que deixam lastro.</p></div></div></div>
+</section>
+
+<section>
+<div class="k">03 · Cor e tipografia</div>
+<h2>Preto, branco, cinza. Azul só para prova.</h2>
+<div class="g" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
+<div class="sw" style="background:#000;color:#fff">#000000 Preto</div>
+<div class="sw" style="background:#fff;color:#000">#FFFFFF Branco</div>
+<div class="sw" style="background:#D9D9D9;color:#000">#D9D9D9 Cinza</div>
+<div class="sw" style="background:#2A2A2E;color:#fff">#2A2A2E Superfície</div>
+<div class="sw" style="background:#1683FF;color:#fff">#1683FF Prova</div>
+</div>
+<p style="margin-top:16px"><b>Regra:</b> o azul aparece apenas onde algo foi atestado ou verificado. Se aparecer em decoração, perde o significado.</p>
+<p><b>Tipografia (hipótese):</b> Inter Tight para títulos e texto, JetBrains Mono para rótulos, hashes e estados. Títulos em caixa alta com tracking largo (+0.22em) quando forem a marca.</p>
+</section>
+
+<section>
+<div class="k">04 · Gramática do produto</div>
+<h2>Cada estágio parece diferente do anterior</h2>
+<p>Evidence ≠ AI Interpretation ≠ Independent Verification ≠ Consensus ≠ Competency State ≠ Attestation ≠ Public Verification. A diferença é visual, não só de rótulo.</p>
+<div class="st">
+<div class="c c1">EVIDÊNCIA<i>Sólido cinza. Dado de origem.</i></div>
+<div class="c c2">INTERPRETAÇÃO IA<i>Tracejado. Proposta interpretativa, não fato.</i></div>
+<div class="c c3">VERIFICAÇÃO<i>Contorno. Mecanismo independente de checagem.</i></div>
+<div class="c c4">CONSENSUS<i>Sólido claro. Convergência dos resultados de verificação.</i></div>
+<div class="c c4">COMPETENCY STATE<i>Sólido branco. Estado suportado; não é certificado.</i></div>
+<div class="c c5">ATTESTATION<i>Azul. Estado/evento registrado para prova de integridade.</i></div>
+<div class="c c6">PUBLIC VERIFICATION ✓<i>Azul sobre preto. Integridade e referência checadas.</i></div>
+<div class="c c3">HUMAN ADJUDICATION<i>Exceção. Surge quando há conflito, ambiguidade ou caso não coberto.</i></div>
+</div>
+<p style="margin-top:14px"><b>Estados de competência:</b> NOT_STARTED · IN_DEVELOPMENT · UNDER_REVIEW · DEMONSTRATED.</p>
+<p><b>Resultados de consenso:</b> AGREEMENT · INSUFFICIENT_EVIDENCE · CONFLICT · HUMAN_ADJUDICATION.</p>
+<p><b>Nota:</b> N1–N4 pertence à linguagem histórica de maturidade da evidência, não substitui os estados de competência nem os resultados de consenso. Se mantido em uma aplicação, deve aparecer como contexto secundário.</p>
+</section>
+
+<section>
+<div class="k">05 · Aplicações prioritárias</div>
+<h2>Avatar, GitHub, documentação</h2>
+<div class="row">
+<div class="av"><svg width="60" height="60"><use href="#ls"/></svg></div>
+<div class="ban" style="flex:1;min-width:280px"><svg width="56" height="56"><use href="#lm"/></svg><div><h3>LASTRO</h3><p>Evidence → Verification → Consensus → Competency State → Attestation → Public Verification</p></div></div>
+</div>
+<div class="two" style="margin-top:26px">
+<div><div class="k">Fazer</div><ul><li>Espaço negativo generoso.</li><li>Área de proteção = metade do diâmetro do anel.</li><li>Tamanho mínimo: 16 px (reduzida), 32 px (completa).</li><li>Diagramas de linha fina para evidência, interpretação, verificação, consenso, estado e prova.</li></ul></div>
+<div><div class="k">Não fazer</div><ul><li>Azul fora de contexto de prova, atestação ou verificação.</li><li>Gradientes, neon ou brilho crypto.</li><li>Texto dentro do símbolo.</li><li>Girar, esticar ou separar as camadas.</li></ul></div>
+</div>
+</section>
+
+<section>
+<div class="k">06 · Decisões e hipóteses</div>
+<div class="two" style="margin-top:12px">
+<div><h2 style="font-size:18px">Decisões v0.2</h2><ul><li>Geometria: anel + 2 camadas + losango.</li><li>Paleta preto/branco/cinza + azul #1683FF.</li><li>Gramática visual alinhada à cadeia Evidence → Verification → Consensus → State → Attestation → Public Verification.</li><li>Nome LASTRO e tagline principal: “Competências que deixam lastro.”</li></ul></div>
+<div><h2 style="font-size:18px">Em aberto</h2><ul><li>Checagem final de disponibilidade do nome e marca.</li><li>Família tipográfica final.</li><li>Tagline secundária / uso contextual, se necessário.</li><li>Motion, templates e iconografia.</li></ul></div>
+</div>
+</section>
+</main>
+</body>
+</html>

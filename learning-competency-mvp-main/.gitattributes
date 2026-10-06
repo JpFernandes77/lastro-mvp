@@ -1,0 +1,17 @@
+# Gitattributes — normalização de line endings
+# Evita warnings LF/CRLF entre ambientes Windows e Linux/Mac
+
+* text=auto
+
+*.ts    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
