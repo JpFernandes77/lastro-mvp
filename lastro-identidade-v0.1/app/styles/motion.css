@@ -1,0 +1,125 @@
+/* ============================================================
+   LASTRO — Motion, language switcher, responsive
+   Restrained by design: no glow, no neon, no spin.
+   ============================================================ */
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.page-content > * { animation: riseIn 0.5s var(--ease) both; }
+.page-content > *:nth-child(1) { animation-delay: 0.02s; }
+.page-content > *:nth-child(2) { animation-delay: 0.07s; }
+.page-content > *:nth-child(3) { animation-delay: 0.12s; }
+.page-content > *:nth-child(4) { animation-delay: 0.17s; }
+.page-content > *:nth-child(5) { animation-delay: 0.22s; }
+
+/* the hairline under the hero draws itself */
+.hero-flow { animation: fadeIn 0.7s var(--ease) both; }
+
+/* the symbol appears once, quietly */
+.symbol-stage svg { animation: fadeIn 0.8s var(--ease) both; }
+
+/* ---------------- language switcher ---------------- */
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+.language-button {
+  min-width: 32px;
+  height: 25px;
+  padding: 0 7px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--mut-2);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  transition: color 0.18s, background 0.18s;
+}
+.language-button:hover { color: var(--fg); background: var(--surface-2); }
+.language-button.language-active { color: #000; background: #fff; }
+
+/* ---------------- reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 1180px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero-visual { justify-content: flex-start; }
+  .symbol-card { max-width: 380px; }
+  .architecture-layout { grid-template-columns: 1fr; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1000px) {
+  .evaluation-layout, .adjudication-layout { grid-template-columns: 1fr; }
+  .evidence-panel, .consensus-panel { min-height: auto; }
+  .page-content { padding: 30px 22px 44px; }
+  .topbar { padding: 0 20px; }
+  .hero { padding: 32px 26px 24px; }
+  .stat-strip { margin: 32px -26px -24px; }
+  .app-footer { padding: 24px 22px 30px; }
+}
+
+@media (max-width: 880px) {
+  .topbar-meta .demo-pill, .topbar-meta .hack-pill { display: none; }
+}
+
+@media (max-width: 720px) {
+  .sidebar { width: 68px; flex-basis: 68px; padding-left: 8px; padding-right: 8px; }
+  .sidebar .brand { padding-left: 10px; }
+  .sidebar .brand > div:not(.brand-mark), .sidebar .nav-item span, .sidebar-bottom { display: none; }
+  .sidebar .collapse-button { display: none; }
+  .nav-item { justify-content: center; padding: 12px 8px; }
+  .topbar { height: 58px; padding: 0 16px; }
+  .breadcrumb span, .breadcrumb svg { display: none; }
+  .page-content { padding: 24px 16px 40px; }
+  .page-heading, .toolbar { align-items: flex-start; flex-direction: column; }
+  .page-heading h1 { font-size: 24px; }
+  .hero { padding: 26px 20px 20px; }
+  .hero-wordmark { letter-spacing: 0.16em; }
+  .stat-strip { margin: 26px -20px -20px; grid-template-columns: 1fr 1fr; }
+  .stat-strip > div { padding: 16px 20px; }
+  .stat-value { font-size: 26px; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .metric-card { padding: 14px; min-height: 108px; }
+  .metric-card strong { font-size: 26px; }
+  .evidence-row { gap: 9px; }
+  .evidence-name { min-width: 104px; }
+  .hash { display: none; }
+  .meta-line { gap: 7px; }
+  .meta-line span { border: 0; padding-right: 0; }
+  .audit-filters { overflow-x: auto; }
+  .proof-card { margin-top: 14px; padding: 20px; }
+  .proof-grid { grid-template-columns: 128px 1fr; }
+  .audit-panel { padding: 18px 14px; }
+  .audit-event { grid-template-columns: 42px 16px 1fr; gap: 9px; }
+  .evaluation-subject h1 { font-size: 19px; }
+  .grammar { grid-template-columns: 1fr 1fr; }
+  .footer-row { flex-direction: column; align-items: flex-start; }
+}

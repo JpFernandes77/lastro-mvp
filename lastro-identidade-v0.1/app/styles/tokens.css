@@ -1,0 +1,206 @@
+/* ============================================================
+   LASTRO — Design tokens
+   Identity v0.1: preto, branco, cinza. Azul só para prova.
+   ============================================================ */
+
+:root {
+  /* ---- surfaces (identidade dark) ---- */
+  --bg: #0b0b0c;
+  --bg-pure: #000000;
+  --surface: #131316;
+  --surface-2: #1b1b1f;
+  --line: #26262a;
+  --line-strong: #3a3a40;
+
+  /* ---- ink ---- */
+  --fg: #f4f4f4;
+  --mut: #9a9a9a;
+  --mut-2: #6b6b70;
+  --gray: #d9d9d9;
+  --gray-deep: #2a2a2e;
+
+  /* ---- prova: o único ponto de cor ---- */
+  --ac: #1683ff;
+  --ac-ink: #ffffff;
+
+  /* ---- geometry ---- */
+  --radius: 12px;
+  --radius-sm: 9px;
+  --radius-pill: 999px;
+
+  /* ---- type ---- */
+  --font-sans: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 16px/1.55 var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+
+::selection { background: var(--ac); color: #fff; }
+
+*:focus-visible {
+  outline: 1.5px solid var(--ac);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 20px; }
+::-webkit-scrollbar-thumb:hover { background: var(--mut-2); }
+
+/* ---- typography ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* the identity's kicker: mono, wide tracking, uppercase */
+.eyebrow, .k {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mut);
+  line-height: 1.5;
+}
+.eyebrow.ac { color: var(--ac); }
+
+.mono, code, th, .num { font-family: var(--font-mono); }
+
+code {
+  font-size: 11px;
+  color: var(--gray);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.muted { color: var(--mut); }
+.text-ac { color: var(--ac) !important; }
+.text-fg { color: var(--fg) !important; }
+.heading-slash { color: var(--line-strong); font-weight: 400; margin: 0 8px; }
+
+/* ============================================================
+   GRAMÁTICA DOS SEIS ESTADOS
+   Cada estágio parece diferente do anterior — a diferença é
+   visual, não só de rótulo.
+   ============================================================ */
+
+.grammar {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+  margin-top: 18px;
+}
+.grammar-card {
+  border-radius: 10px;
+  padding: 14px;
+  min-height: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background: transparent;
+}
+.grammar-card i {
+  font-style: normal;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0;
+  opacity: 0.72;
+  line-height: 1.45;
+  margin-top: 12px;
+}
+/* EVIDÊNCIA — sólido cinza, dado de origem */
+.g-evidence { background: var(--gray-deep); color: var(--gray); }
+/* INTERPRETAÇÃO IA — tracejado, inferência não fato */
+.g-ai { border: 1.5px dashed var(--mut); color: var(--gray); }
+/* REVISÃO — contorno branco, decisão humana */
+.g-review { border: 1.5px solid #fff; color: #fff; }
+/* ESTADO — sólido branco, não é certificado */
+.g-state { background: #fff; color: #000; }
+/* ATTESTATION — azul, prova registrada */
+.g-attest { background: var(--ac); color: #fff; }
+/* VERIFICAÇÃO ✓ — azul sobre preto, checada */
+.g-verify { background: #000; color: var(--ac); border: 1.5px solid var(--ac); }
+
+/* ============================================================
+   BADGES — os mesmos seis estágios, em escala de rótulo
+   ============================================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+.badge-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex: 0 0 auto; }
+.b-state { background: #fff; color: #000; }
+.b-evidence { background: var(--gray-deep); color: var(--gray); }
+.b-ai { border: 1.5px dashed var(--mut); color: var(--gray); }
+.b-review { border: 1.5px solid #fff; color: #fff; }
+.b-attest { background: var(--ac); color: #fff; }
+.b-verify { background: #000; color: var(--ac); border: 1.5px solid var(--ac); }
+.b-neutral { border-color: var(--line-strong); color: var(--mut); }
+
+/* ============================================================
+   ESCALA DE CONFIANÇA N1–N4
+   N1–N3 em tons de cinza. Azul reservado para N4.
+   ============================================================ */
+.confidence { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.confidence-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg);
+  padding: 12px 14px;
+}
+.confidence-level {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--mut);
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  padding: 3px 7px;
+  min-width: 34px;
+  text-align: center;
+}
+.confidence-row strong { font-size: 12.5px; font-weight: 500; color: var(--gray); }
+.confidence-row p { margin: 0; color: var(--mut-2); font-size: 11px; }
+.confidence-row.n4 .confidence-level { background: var(--ac); border-color: var(--ac); color: #fff; }
+.confidence-row.n4 strong { color: var(--fg); }
+.confidence-row.n4 p { color: var(--mut); }
